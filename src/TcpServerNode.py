@@ -91,6 +91,7 @@ class Node(threading.Thread):
             message = json.dumps(data, separators=(',', ':'));
             self.dprint("Visuals sending: " + message)
             #self.udp_server.sendto(message, ('92.222.168.248', 15000))
+            print(message)
             self.udp_server.sendto(message, ('dev.codingskills.nl', 15000))
             self.udp_server.sendto(message, ('codingskills.nl', 15000))
 
